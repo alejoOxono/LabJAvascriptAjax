@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Estilos propios -->
+     <link href="./sources/css/misEstilos.css" rel="stylesheet"  >
+    <title>Lab Javascript Ajax</title>
+</head>
+<body>
+    <div class="form-container">
+        <h3 class="text-center">LABORATORIO</h3>
+        <br>
+
+        <h4 class="text-start">Javascript</h4>
+        <br>
+
+        <form>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="palindromo" class="col-form-label"><b>1. </b>Palíndromo</label>
+            </div>
+            <div class="col-auto">
+              <input name="palindromo" id="entradaPalindromo" class="form-control">
+            </div>
+            <div class="col-auto">
+              <span id="palindromoRespuesta" class="form-text"></span>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-auto">
+            <label class="col-form-label"><b>2. </b>Mayor?</label>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <input id="entradaUnoMayor" type="number" class="form-control" >
+            </div>
+            <div class="col-auto">
+              <input id="entradaDosMayor" type="number" class="form-control">
+            </div>
+            <div class="col-auto">
+              <button type="button" id="botonMayor" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+          <div class="col-auto">
+            <span id="mayorRespuesta" class="form-text"></span>
+          </div>
+          <br>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="vocales" class="col-form-label"><b>3. </b>Solo Vocales</label>
+            </div>
+            <div class="col-auto">
+              <input name="vocales" id="entradaVocales" class="form-control" maxlength="100">
+            </div>
+            <div class="col-auto">
+              <span id="vocalesRespuesta" class="form-text"></span>
+            </div>
+          </div>
+          <br>
+
+          <div class="col-auto">
+            <label for="contarVocales" class="col-form-label"><b>4. </b>Conteo de Vocales</label>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <textarea rows="4" name="contarVocales" id="entradaContarVocales" class="form-control"></textarea>
+            </div>
+            <div class="col-auto">
+              <span id="contarVocalesRespuestaA" class="form-text"></span>
+              <br>
+              <span id="contarVocalesRespuestaE" class="form-text"></span>
+              <br>
+              <span id="contarVocalesRespuestaI" class="form-text"></span>
+              <br>
+              <span id="contarVocalesRespuestaO" class="form-text"></span>
+              <br>
+              <span id="contarVocalesRespuestaU" class="form-text"></span>
+              <br>
+            </div>
+          </div>
+          <br>
+
+          <h4 class="text-start">Ajax</h4>
+          <br>
+
+          <div class="row g-2 align-items-center">
+            <div class="col-auto">
+              <label for="url" class="col-form-label"><b>1. </b>URL</label>
+            </div>
+            <div class="col-auto">
+              <input name="url" id="url" class="form-control" readonly>
+            </div>
+          </div>
+          <br>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="entradaUrl" class="col-form-label">Descarga Y Muestra</label>
+            </div>
+            <div class="col-auto">
+              <input name="entradaUrl" id="entradaUrl" class="form-control" placeholder="url...">
+            </div>
+            <div class="col-auto">
+              <button type="button" id="botonUrl" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+          <br>
+          <div class="col-auto" id="respuestaUrl"></div>
+          <div class="col-auto" id="estadoUrl"> </div>
+          <div class="col-auto" id="cabeceraUrl"></div>
+
+        </form>
+    </div>
+</body>
+</html>
+<!-- Funciones propias-->
+<script src="./sources/js/funciones.js" ></script>
